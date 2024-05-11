@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <EditText
+            android:id="@+id/input_bpm"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="text"
+            android:text="90"
+            app:layout_constraintBottom_toTopOf="@+id/play_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pocket_view"
+            tools:ignore="HardcodedText,LabelFor,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/label_bpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BPM:"
+            app:layout_constraintBottom_toBottomOf="@+id/input_bpm"
+            app:layout_constraintEnd_toStartOf="@+id/input_bpm"
+            app:layout_constraintTop_toTopOf="@+id/input_bpm"
+            app:layout_constraintVertical_bias="0.561"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/pocket_view"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginBottom="92dp"
+            android:contentDescription="The Beat Note Sheet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.339"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            app:icon="@drawable/stop_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/play_button"
+            app:layout_constraintEnd_toStartOf="@+id/play_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/play_button"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            app:icon="@drawable/play_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pocket_view"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            app:icon="@drawable/pause_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/play_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/play_button"
+            app:layout_constraintTop_toTopOf="@+id/play_button"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
